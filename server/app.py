@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
-import pickle  # Assuming your model is saved in pickle format
+import pickle
+from flask_cors import CORS
 
 # Load your pickled model (replace 'model.pkl' with your actual filename)
 vectorizer = pickle.load(open('./vectorizer.pkl', 'rb'))
@@ -7,6 +8,11 @@ model_lr = pickle.load(open('./log_reg_model.pkl', 'rb'))
 model_dt = pickle.load(open('./dec_tree_model.pkl', 'rb'))
 
 app = Flask(__name__)
+CORS(app)
+
+@app.route('/', methods=['GET'])
+def index():
+    return "<h1>Hello, Users! </h1><p>This is the backend server for the Phishing URL Detection app.</p><h3>This backend uses Flask and pickle.</h3><p> The pickle files used in this backend server can be obtained from this colab file: <a href='https://colab.research.google.com/drive/1iW6Z8fytQnJNrZNmSm4giaVoQh9Q7UPj?usp=sharing'>Link</a></h3><p>I hope you guys have fun using this app...</p><marquee><strong>Made by : Dona Murmu and Ayush Jalan</strong></marquee>"
 
 @app.route('/predict', methods=['POST'])
 def predict():

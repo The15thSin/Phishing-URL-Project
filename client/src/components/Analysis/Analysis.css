@@ -1,0 +1,43 @@
+.analysis-container {
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(3px);
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.499);
+    border: 2px solid rgba(255, 255, 255, 0.19);
+    color: white;
+    font-family: sans-serif;
+    width: 40%;
+    margin: auto;
+    border-radius: 15px;
+}
+
+.analysis-card {
+    /* background-color: #7c61d3; */
+    padding: 2rem;
+    width: 90%;
+}
+
+.analysis-card h2{
+    text-align: center;
+    margin-bottom: 0.5rem;
+    text-decoration: underline;
+}
+
+.analysis-card h4, 
+.analysis-card p{
+    text-align: center;
+}
+
+.analysis-card p {
+    margin-bottom: 1rem;
+}
+
+.legitimate {
+    color: rgb(0, 255, 0);
+}
+
+.phishing {
+    color: red;
+}
+
