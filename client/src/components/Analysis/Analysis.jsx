@@ -9,11 +9,11 @@ function Analysis(props) {
                 <h3 style={{color: 'orange', marginBottom: '1rem', cursor:'pointer'}}>{props.url}</h3>
 
                 <h4 className={props.pred.prediction_dt === 1 ? 'legitimate' : 'phishing'}>
-                    It is {props.pred.prediction_dt === 1 ? 'Legitimate' : 'Phishing'}.
+                    It is {props.pred.prediction_dt === 1 ? 'Legitimate' : 'Phishing'} URL.
                 </h4>
                 <p>(Prediction by Decision Tree)</p>
                 <h4 className={props.pred.prediction_lr === 1 ? 'legitimate' : 'phishing'}>
-                    It is {props.pred.prediction_lr === 1 ? 'Legitimate' : 'Phishing'}.
+                    It is {props.pred.prediction_lr === 1 ? 'Legitimate' : 'Phishing'} URL.
                 </h4>
                 <p>(Prediction by Logistic Regression)</p>
             </div>
