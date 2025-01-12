@@ -9,10 +9,12 @@ function Main() {
   async function handleSubmit(event) {
     event.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/predict', { inputData: url });
-      await setPred(res.data)
+      const res = await axios.post('https://equipped-lasting-yeti.ngrok-free.app/predict', { inputData: url });
+      await setPred(res.data);
+      console.log(res.data);
     } catch (err) {
       console.log("Error making prediction... : ", err);
+      setPred("0");
     }
   }
 
@@ -36,9 +38,15 @@ function Main() {
         </form>
       </div>
       {
-        (pred !== "-1") &&
+        (pred !== "-1" && pred !== "0") &&
         <div>
           <Analysis url={url} pred = {pred}/>
+        </div>
+      }
+      {
+        (pred === "0") &&
+        <div>
+          <h2 className='no-pred'>Please enter a Valid URL...</h2>
         </div>
       }
     </div>

@@ -3,7 +3,7 @@
     justify-content: center;
     backdrop-filter: blur(3px);
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.499);
+    background-color: rgb(13, 11, 26);
     border: 2px solid rgba(255, 255, 255, 0.19);
     color: white;
     font-family: sans-serif;
@@ -14,15 +14,18 @@
 }
 
 .analysis-card {
-    /* background-color: #7c61d3; */
     padding: 2rem;
     width: 90%;
 }
 
 .analysis-card h2{
     text-align: center;
-    margin-bottom: 0.5rem;
+    margin-bottom: 2rem;
     text-decoration: underline;
+}
+
+.analysis-card h3{
+    text-align: center;
 }
 
 .analysis-card h4, 
@@ -34,11 +37,70 @@
     margin-bottom: 1rem;
 }
 
+.ac-content{
+    width: 100%;
+}
+
+.ac-content h3{
+    width: 90%;
+    word-wrap:break-word;
+    text-align: center;
+    margin: auto;
+}
+
+.legitimate-div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+    gap: 1rem;
+}
+
 .legitimate {
     color: rgb(0, 255, 0);
 }
 
-.phishing {
+.warning-div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+    gap: 1rem;
+}
+
+.warning {
+    color: orange;
+}
+
+.danger-div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+    gap: 1rem;
+}
+
+.danger {
     color: red;
 }
 
+.trust-score{
+    align-items: center;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.trust-score h3{
+    color: rgb(255, 255, 255);
+    font-size: x-large;
+}
+
+.trust-score p{
+    font-size: large;
+}

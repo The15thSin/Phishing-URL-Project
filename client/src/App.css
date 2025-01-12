@@ -1,0 +1,5 @@
+.app{
+    backdrop-filter: blur(10px);
+    background-color: #13192fe6;
+    height: 100vh;
+}

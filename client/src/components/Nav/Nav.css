@@ -1,12 +1,14 @@
 .navbar {
     display: flex;
+    position:fixed;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
     /* background-color: #ff00005e; */
-    background-image: linear-gradient(#ff00004b, #00000028);
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
+    background-color:#08031a;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    width: 100%;
 }
 
 .material-theme {
@@ -25,14 +27,13 @@
 .app-logo img {
     height: 100%;
     padding: 0 0.5rem;
-    filter: drop-shadow(2px 2px 2px rgb(255, 255, 255));
+    filter: drop-shadow(0px 0px 2px rgba(255, 255, 255, 0.429));
 }
 
 .app-logo p {
     font-size: x-large;
     font-weight: bolder;
     padding: 0.2rem 0rem;
-    text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.274);
 }
 
 .al-text-red {
@@ -64,8 +65,6 @@
 }
 
 .no-opts:hover {
-    color: #ff0000;
-    text-shadow: 0px 0px 1px rgba(255, 0, 0, 0.5),
-                0px 0px 5px rgba(255, 166, 0, 0.625);
+    color: #ff1d1d;
     transform: scale(1.2);
 }
